@@ -36,7 +36,6 @@ router.post('/login', async (req, res) => {
       user.password,
       process.env.PASS_SEC
     );
-
     const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
     const inputPassword = req.body.password;
@@ -53,6 +52,7 @@ router.post('/login', async (req, res) => {
     );
 
     const { password, ...others } = user._doc;
+
     res.status(200).json({ ...others, accessToken });
   } catch (err) {
     res.status(500).json(err);

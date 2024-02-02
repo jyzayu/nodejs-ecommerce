@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const userRoute = require('./routes/user');
-const authRoute = require('./routes/auth');
-const productRoute = require('./routes/product');
-const cartRoute = require('./routes/cart');
-const orderRoute = require('./routes/order');
+const userRoute = require('./src/routes/user');
+const authRoute = require('./src/routes/auth');
+const productRoute = require('./src/routes/product');
+const cartRoute = require('./src/routes/cart');
+const orderRoute = require('./src/routes/order');
 const cors = require('cors');
 
 dotenv.config();
